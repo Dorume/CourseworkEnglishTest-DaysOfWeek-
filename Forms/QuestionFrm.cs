@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lets__study_
+namespace Lets__study_.Forms
 {
-    public partial class Form1 : Form
+    public partial class QuestionFrm : Form
     {
-        public Form1()
+        public QuestionFrm()
         {
             InitializeComponent();
         }

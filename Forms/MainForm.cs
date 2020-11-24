@@ -20,10 +20,5 @@ namespace Lets__study_.Forms
             Child = child;
         }
 
-        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Child.MdiParent = this;
-            Child.Show();
-        }
     }
 }

@@ -13,10 +13,7 @@ namespace Lets__study_
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             App.OnStartup();
-            Application.Run(new MainForm());
             Application.ApplicationExit += App.OnExit;
         }
 

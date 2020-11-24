@@ -1,6 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Lets__study_.Forms;
+using Lets__study_.Services;
+using Lets__study_.Tests;
+using Lets__study_.Tests.Questions;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Windows.Forms;
 
 namespace Lets__study_
 {
@@ -12,14 +17,18 @@ namespace Lets__study_
 
         public static IServiceProvider Services => Host.Services;
 
-        internal static void ConfigureService(HostBuilderContext host, IServiceCollection services)
-        {
-
-        }
-
+        internal static void ConfigureService(HostBuilderContext host, IServiceCollection services) => services
+            .AddForms()
+            .AddTest()
+            .AddServices()
+            .AddQuestions()
+            ;
         internal static async void OnStartup()
         {
             var host = Host;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(Services.GetRequiredService<MainForm>());
             await host.StartAsync();
         }
 

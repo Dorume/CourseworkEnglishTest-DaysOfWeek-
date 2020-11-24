@@ -13,18 +13,17 @@ namespace Lets__study_.Forms
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private QuestionFrm Child { get; set; }
+        public MainForm(QuestionFrm child)
         {
             InitializeComponent();
+            Child = child;
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuestionFrm questionFrm = new QuestionFrm()
-            {
-                MdiParent = this
-            };
-            questionFrm.Show();
+            Child.MdiParent = this;
+            Child.Show();
         }
     }
 }

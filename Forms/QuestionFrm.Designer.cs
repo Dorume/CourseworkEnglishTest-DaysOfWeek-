@@ -171,6 +171,7 @@
             this.BottomPanel.ResumeLayout(false);
             this.OkbtnPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.Icon = Properties.Resources.QuestionFormIcon;
 
         }
 

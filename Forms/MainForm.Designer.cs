@@ -62,7 +62,7 @@
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             this.ExitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.ExitToolStripMenuItem.Text = "Ви&хід";
             // 
             // ServiceToolStripMenuItem
@@ -76,7 +76,7 @@
             // SettingsToolStripMenuItem
             // 
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.SettingsToolStripMenuItem.Text = "&Налаштування";
             // 
             // HelpToolStripMenuItem
@@ -93,6 +93,7 @@
             this.HelpManualToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.HelpManualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.HelpManualToolStripMenuItem.Text = "&Посібник";
+            this.HelpManualToolStripMenuItem.Click += new System.EventHandler(this.HelpManualToolStripMenuItem_Click);
             // 
             // MainForm
             // 

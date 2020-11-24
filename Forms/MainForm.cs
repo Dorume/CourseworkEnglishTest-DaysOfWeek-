@@ -20,5 +20,9 @@ namespace Lets__study_.Forms
             Child = child;
         }
 
+        private void HelpManualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"Resources/Help.chm");
+        }
     }
 }

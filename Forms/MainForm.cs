@@ -13,9 +13,12 @@ namespace Lets__study_.Forms
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private SettingsForm Settings { get; set; }
+        public MainForm(SettingsForm child)
         {
             InitializeComponent();
+            Settings = child;
+            Settings.MdiParent = this;
         }
 
         private void HelpManualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,7 +38,7 @@ namespace Lets__study_.Forms
 
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Settings.Show();
         }
     }
 }

@@ -30,15 +30,15 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.CountOfQuestions = new System.Windows.Forms.TrackBar();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountOfQuestions)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.trackBar1);
+            this.flowLayoutPanel1.Controls.Add(this.CountOfQuestions);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 20);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -54,15 +54,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Кількість запитань";
             // 
-            // trackBar1
+            // CountOfQuestions
             // 
-            this.trackBar1.Location = new System.Drawing.Point(112, 3);
-            this.trackBar1.Maximum = 15;
-            this.trackBar1.Minimum = 5;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(133, 45);
-            this.trackBar1.TabIndex = 1;
-            this.trackBar1.Value = 5;
+            this.CountOfQuestions.Location = new System.Drawing.Point(112, 3);
+            this.CountOfQuestions.Maximum = 15;
+            this.CountOfQuestions.Minimum = 5;
+            this.CountOfQuestions.Name = "CountOfQuestions";
+            this.CountOfQuestions.Size = new System.Drawing.Size(133, 45);
+            this.CountOfQuestions.TabIndex = 1;
+            this.CountOfQuestions.Value = Properties.Settings.Default.CountOfQuestions;
+            this.CountOfQuestions.Scroll += new System.EventHandler(this.CountOfQuestions_Scroll);
             // 
             // SettingsForm
             // 
@@ -76,7 +77,7 @@
             this.Text = "SettingsForm";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountOfQuestions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,6 +86,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar CountOfQuestions;
     }
 }

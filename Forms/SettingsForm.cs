@@ -16,5 +16,11 @@ namespace Lets__study_.Forms
         {
             InitializeComponent();
         }
+
+        private void CountOfQuestions_Scroll(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.CountOfQuestions = CountOfQuestions.Value;
+            Properties.Settings.Default.Save();
+        }
     }
 }

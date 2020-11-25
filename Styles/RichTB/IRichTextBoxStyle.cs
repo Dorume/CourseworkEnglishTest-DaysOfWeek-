@@ -1,9 +1,8 @@
 ﻿using System.Windows.Forms;
 namespace Lets__study_.Styles.RichTB
 {
-    interface IRichTextBoxStyle
+    public interface IRichTextBoxStyle
     {
-        RichTextBox GetStyle(int start, int end);
-        RichTextBox GetStyle(int end);
+        void GetStyle(RichTextBox textBox);
     }
 }

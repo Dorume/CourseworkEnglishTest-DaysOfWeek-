@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.QuestionPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.QuestionTextBox = new System.Windows.Forms.RichTextBox();
+            this.QuestionsbtnsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.OkbtnPanel = new System.Windows.Forms.Panel();
             this.AnswerBtn = new System.Windows.Forms.Button();
             this.PrevBtn = new System.Windows.Forms.Button();
             this.NextBtn = new System.Windows.Forms.Button();
             this.FinishTestBtn = new System.Windows.Forms.Button();
-            this.QuestionsbtnsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.QuestionTextBox = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.QuestionPanel.SuspendLayout();
-            this.BottomPanel.SuspendLayout();
-            this.OkbtnPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.BottomPanel.SuspendLayout();
+            this.OkbtnPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // QuestionPanel
@@ -57,77 +57,6 @@
             this.QuestionPanel.Size = new System.Drawing.Size(384, 311);
             this.QuestionPanel.TabIndex = 5;
             // 
-            // BottomPanel
-            // 
-            this.BottomPanel.Controls.Add(this.OkbtnPanel);
-            this.BottomPanel.Controls.Add(this.PrevBtn);
-            this.BottomPanel.Controls.Add(this.NextBtn);
-            this.BottomPanel.Controls.Add(this.FinishTestBtn);
-            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 311);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.BottomPanel.Size = new System.Drawing.Size(384, 100);
-            this.BottomPanel.TabIndex = 4;
-            // 
-            // OkbtnPanel
-            // 
-            this.OkbtnPanel.Controls.Add(this.AnswerBtn);
-            this.OkbtnPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OkbtnPanel.Location = new System.Drawing.Point(80, 5);
-            this.OkbtnPanel.Name = "OkbtnPanel";
-            this.OkbtnPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.OkbtnPanel.Size = new System.Drawing.Size(149, 90);
-            this.OkbtnPanel.TabIndex = 3;
-            // 
-            // AnswerBtn
-            // 
-            this.AnswerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AnswerBtn.Location = new System.Drawing.Point(20, 20);
-            this.AnswerBtn.Name = "AnswerBtn";
-            this.AnswerBtn.Size = new System.Drawing.Size(109, 50);
-            this.AnswerBtn.TabIndex = 0;
-            this.AnswerBtn.Text = "Відповісти";
-            this.AnswerBtn.UseVisualStyleBackColor = true;
-            // 
-            // PrevBtn
-            // 
-            this.PrevBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PrevBtn.Location = new System.Drawing.Point(229, 5);
-            this.PrevBtn.Name = "PrevBtn";
-            this.PrevBtn.Size = new System.Drawing.Size(75, 90);
-            this.PrevBtn.TabIndex = 2;
-            this.PrevBtn.Text = "Назад";
-            this.PrevBtn.UseVisualStyleBackColor = true;
-            // 
-            // NextBtn
-            // 
-            this.NextBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.NextBtn.Location = new System.Drawing.Point(304, 5);
-            this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(75, 90);
-            this.NextBtn.TabIndex = 1;
-            this.NextBtn.Text = "Вперед";
-            this.NextBtn.UseVisualStyleBackColor = true;
-            // 
-            // FinishTestBtn
-            // 
-            this.FinishTestBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FinishTestBtn.Location = new System.Drawing.Point(5, 5);
-            this.FinishTestBtn.Name = "FinishTestBtn";
-            this.FinishTestBtn.Size = new System.Drawing.Size(75, 90);
-            this.FinishTestBtn.TabIndex = 0;
-            this.FinishTestBtn.Text = "Завершити тест";
-            this.FinishTestBtn.UseVisualStyleBackColor = true;
-            // 
-            // QuestionsbtnsPanel
-            // 
-            this.QuestionsbtnsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QuestionsbtnsPanel.Location = new System.Drawing.Point(0, 0);
-            this.QuestionsbtnsPanel.Name = "QuestionsbtnsPanel";
-            this.QuestionsbtnsPanel.Size = new System.Drawing.Size(384, 56);
-            this.QuestionsbtnsPanel.TabIndex = 0;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
@@ -137,16 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 255);
             this.panel1.TabIndex = 1;
-            // 
-            // QuestionTextBox
-            // 
-            this.QuestionTextBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QuestionTextBox.Location = new System.Drawing.Point(0, 0);
-            this.QuestionTextBox.Name = "QuestionTextBox";
-            this.QuestionTextBox.ReadOnly = true;
-            this.QuestionTextBox.Size = new System.Drawing.Size(384, 115);
-            this.QuestionTextBox.TabIndex = 0;
-            this.QuestionTextBox.Text = "";
             // 
             // panel2
             // 
@@ -167,6 +86,87 @@
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
+            // QuestionTextBox
+            // 
+            this.QuestionTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QuestionTextBox.Location = new System.Drawing.Point(0, 0);
+            this.QuestionTextBox.Name = "QuestionTextBox";
+            this.QuestionTextBox.ReadOnly = true;
+            this.QuestionTextBox.Size = new System.Drawing.Size(384, 115);
+            this.QuestionTextBox.TabIndex = 0;
+            this.QuestionTextBox.Text = "";
+            // 
+            // QuestionsbtnsPanel
+            // 
+            this.QuestionsbtnsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QuestionsbtnsPanel.Location = new System.Drawing.Point(0, 0);
+            this.QuestionsbtnsPanel.Name = "QuestionsbtnsPanel";
+            this.QuestionsbtnsPanel.Size = new System.Drawing.Size(384, 56);
+            this.QuestionsbtnsPanel.TabIndex = 0;
+            // 
+            // BottomPanel
+            // 
+            this.BottomPanel.Controls.Add(this.OkbtnPanel);
+            this.BottomPanel.Controls.Add(this.PrevBtn);
+            this.BottomPanel.Controls.Add(this.NextBtn);
+            this.BottomPanel.Controls.Add(this.FinishTestBtn);
+            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomPanel.Location = new System.Drawing.Point(0, 311);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Padding = new System.Windows.Forms.Padding(15);
+            this.BottomPanel.Size = new System.Drawing.Size(384, 100);
+            this.BottomPanel.TabIndex = 4;
+            // 
+            // OkbtnPanel
+            // 
+            this.OkbtnPanel.Controls.Add(this.AnswerBtn);
+            this.OkbtnPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OkbtnPanel.Location = new System.Drawing.Point(90, 15);
+            this.OkbtnPanel.Name = "OkbtnPanel";
+            this.OkbtnPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.OkbtnPanel.Size = new System.Drawing.Size(129, 70);
+            this.OkbtnPanel.TabIndex = 3;
+            // 
+            // AnswerBtn
+            // 
+            this.AnswerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AnswerBtn.Location = new System.Drawing.Point(20, 20);
+            this.AnswerBtn.Name = "AnswerBtn";
+            this.AnswerBtn.Size = new System.Drawing.Size(89, 30);
+            this.AnswerBtn.TabIndex = 0;
+            this.AnswerBtn.Text = "Відповісти";
+            this.AnswerBtn.UseVisualStyleBackColor = true;
+            // 
+            // PrevBtn
+            // 
+            this.PrevBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PrevBtn.Location = new System.Drawing.Point(219, 15);
+            this.PrevBtn.Name = "PrevBtn";
+            this.PrevBtn.Size = new System.Drawing.Size(75, 70);
+            this.PrevBtn.TabIndex = 2;
+            this.PrevBtn.Text = "Назад";
+            this.PrevBtn.UseVisualStyleBackColor = true;
+            // 
+            // NextBtn
+            // 
+            this.NextBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NextBtn.Location = new System.Drawing.Point(294, 15);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Size = new System.Drawing.Size(75, 70);
+            this.NextBtn.TabIndex = 1;
+            this.NextBtn.Text = "Вперед";
+            this.NextBtn.UseVisualStyleBackColor = true;
+            // 
+            // FinishTestBtn
+            // 
+            this.FinishTestBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FinishTestBtn.Location = new System.Drawing.Point(15, 15);
+            this.FinishTestBtn.Name = "FinishTestBtn";
+            this.FinishTestBtn.Size = new System.Drawing.Size(75, 70);
+            this.FinishTestBtn.TabIndex = 0;
+            this.FinishTestBtn.Text = "Завершити тест";
+            this.FinishTestBtn.UseVisualStyleBackColor = true;
+            // 
             // QuestionFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,12 +177,13 @@
             this.Icon = global::Lets__study_.Properties.Resources.QuestionFormIcon;
             this.MinimumSize = new System.Drawing.Size(400, 450);
             this.Name = "QuestionFrm";
-            this.Text = "QuestionFrm";
+            this.Text = "Test time!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionFrm_FormClosing);
             this.QuestionPanel.ResumeLayout(false);
-            this.BottomPanel.ResumeLayout(false);
-            this.OkbtnPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.BottomPanel.ResumeLayout(false);
+            this.OkbtnPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

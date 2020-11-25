@@ -6,20 +6,10 @@ namespace Lets__study_.Styles
 {
     class RichTBEnglishStyle : IRichTextBoxStyle
     {
-        public RichTextBox GetStyle(int start, int end)
+        public void GetStyle(RichTextBox textBox)
         {
-            return new RichTextBox()
-            {
-                SelectionStart = start,
-                SelectionLength = end,
-                SelectionAlignment = HorizontalAlignment.Center,
-                SelectionColor = Color.Chocolate,
-                SelectionFont = new Font("Maiandra GD", 12)
-            };
-        }
-        public RichTextBox GetStyle(int end)
-        {
-            return GetStyle(0, end);
+            textBox.ForeColor = Color.Chocolate;
+            textBox.Font = new Font("Maiandra GD", 16);
         }
 
     }

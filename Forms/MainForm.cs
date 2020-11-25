@@ -29,11 +29,16 @@ namespace Lets__study_.Forms
         private void StartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Question.Show();
+            BackPanel.Controls.Add(Question);
+            BackPanel.Tag = Question;
+            Question.TopMost = true;
+            Question.BringToFront();
         }
 
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.Show();
+            Settings.BringToFront();
         }
     }
 }

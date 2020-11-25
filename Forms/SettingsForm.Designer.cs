@@ -30,15 +30,15 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.CountOfQuestions = new System.Windows.Forms.TrackBar();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CountOfQuestions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.CountOfQuestions);
+            this.flowLayoutPanel1.Controls.Add(this.numericUpDown1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 20);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -54,16 +54,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Кількість запитань";
             // 
-            // CountOfQuestions
+            // numericUpDown1
             // 
-            this.CountOfQuestions.Location = new System.Drawing.Point(112, 3);
-            this.CountOfQuestions.Maximum = 15;
-            this.CountOfQuestions.Minimum = 5;
-            this.CountOfQuestions.Name = "CountOfQuestions";
-            this.CountOfQuestions.Size = new System.Drawing.Size(133, 45);
-            this.CountOfQuestions.TabIndex = 1;
-            this.CountOfQuestions.Value = global::Lets__study_.Properties.Settings.Default.CountOfQuestions;
-            this.CountOfQuestions.Scroll += new System.EventHandler(this.CountOfQuestions_Scroll);
+            this.numericUpDown1.Location = new System.Drawing.Point(112, 3);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // SettingsForm
             // 
@@ -78,7 +90,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CountOfQuestions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,6 +99,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TrackBar CountOfQuestions;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

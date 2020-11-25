@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,11 +38,14 @@
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BackPanel = new System.Windows.Forms.Panel();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Wheat;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.ServiceToolStripMenuItem,
@@ -118,11 +122,25 @@
             this.HelpManualToolStripMenuItem.Text = "&Посібник";
             this.HelpManualToolStripMenuItem.Click += new System.EventHandler(this.HelpManualToolStripMenuItem_Click);
             // 
+            // BackPanel
+            // 
+            this.BackPanel.BackColor = System.Drawing.Color.PapayaWhip;
+            this.BackPanel.BackgroundImage = global::Lets__study_.Properties.Resources.MainFormBack;
+            this.BackPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BackPanel.Location = new System.Drawing.Point(0, 24);
+            this.BackPanel.Name = "BackPanel";
+            this.BackPanel.Size = new System.Drawing.Size(784, 387);
+            this.BackPanel.TabIndex = 2;
+            this.ToolTip.SetToolTip(this.BackPanel, "Для початку тесту натисність F5 :)");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.BackPanel);
             this.Controls.Add(this.menuStrip1);
             this.Icon = global::Lets__study_.Properties.Resources.MainFormIcon;
             this.IsMdiContainer = true;
@@ -147,6 +165,8 @@
         private System.Windows.Forms.ToolStripMenuItem HelpManualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StartToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Panel BackPanel;
+        private System.Windows.Forms.ToolTip ToolTip;
     }
 }
 

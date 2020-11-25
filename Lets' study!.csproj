@@ -210,7 +210,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Interface\ITestHandler.cs" />
     <Compile Include="Services\ServiceRegistrator.cs" />
+    <Compile Include="Services\TestHandler.cs" />
     <Compile Include="Tests\DaysOfWeek.cs" />
     <Compile Include="Tests\Interface\ITest.cs" />
     <Compile Include="Tests\Questions\Interface\IQuestion.cs" />
@@ -274,6 +276,7 @@
   <ItemGroup>
     <None Include="Resources\setting.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,5 +1,4 @@
 ﻿using Lets__study_.Tests.Interface;
-using Lets__study_.Tests.Questions;
 using Lets__study_.Tests.Questions.Interface;
 using System.Collections.Generic;
 
@@ -7,7 +6,7 @@ namespace Lets__study_.Tests
 {
     class DaysOfWeek : ITest
     {
-        public IList<IQuestion> Questions { get; set; } = new List<IQuestion>();
+        private List<IQuestion> Questions { get; set; } = new List<IQuestion>();
 
         public DaysOfWeek(IQuestion question)
         {
@@ -18,6 +17,22 @@ namespace Lets__study_.Tests
             Questions.Add(question.AddQuest("Friday", "Пятниця"));
             Questions.Add(question.AddQuest("Saturday", "Субота"));
             Questions.Add(question.AddQuest("Sunday", "Неділя"));
+        }
+
+        public List<string> GetQuestionList()
+        {
+            List<string> questionList = new List<string>();
+            foreach (IQuestion question in Questions)
+                questionList.Add(question.Question);
+            return questionList;
+        }
+
+        public List<string> GetAnswerList()
+        {
+            List<string> answerList = new List<string>();
+            foreach (IQuestion answer in Questions)
+                answerList.Add(answer.Answer);
+            return answerList;
         }
     }
 }

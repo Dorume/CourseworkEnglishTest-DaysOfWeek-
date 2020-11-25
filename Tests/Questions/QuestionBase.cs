@@ -1,11 +1,11 @@
 ﻿using Lets__study_.Tests.Questions.Interface;
+using System.Collections.Generic;
 
 namespace Lets__study_.Tests.Questions
 {
     class QuestionBase : IQuestion
     {
-        public string Question { get; set; }
-        public string Answer { get; set; }
+        public Dictionary<string, string> QuestionList { get; set; }
 
         public IQuestion AddQuest(string question, string answer)
         {

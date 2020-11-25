@@ -62,7 +62,7 @@
             this.CountOfQuestions.Name = "CountOfQuestions";
             this.CountOfQuestions.Size = new System.Drawing.Size(133, 45);
             this.CountOfQuestions.TabIndex = 1;
-            this.CountOfQuestions.Value = Properties.Settings.Default.CountOfQuestions;
+            this.CountOfQuestions.Value = global::Lets__study_.Properties.Settings.Default.CountOfQuestions;
             this.CountOfQuestions.Scroll += new System.EventHandler(this.CountOfQuestions_Scroll);
             // 
             // SettingsForm
@@ -75,6 +75,7 @@
             this.Name = "SettingsForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "SettingsForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CountOfQuestions)).EndInit();

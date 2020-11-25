@@ -7,7 +7,7 @@ namespace Lets__study_.Forms
         public static IServiceCollection AddForms(this IServiceCollection services) => services
             .AddSingleton<MainForm>()
             .AddTransient<QuestionFrm>()
-            .AddScoped<SettingsForm>()
+            .AddSingleton<SettingsForm>()
             ;
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Lets__study_.Services.Interface;
-using Lets__study_.Styles.RichTB;
+using Lets__study_.Styles.RichTB.Interface;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

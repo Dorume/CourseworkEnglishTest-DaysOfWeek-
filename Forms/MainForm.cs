@@ -38,6 +38,10 @@ namespace Lets__study_.Forms
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.Show();
+            BackPanel.Controls.Add(Settings);
+            BackPanel.Tag = Settings;
+            Settings.TopMost = true;
+            Settings.BringToFront();
             Settings.BringToFront();
         }
     }

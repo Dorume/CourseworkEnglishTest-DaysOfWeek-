@@ -1,8 +1,8 @@
-﻿using Lets__study_.Styles.RichTB;
+﻿using Lets__study_.Styles.RichTB.Interface;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Lets__study_.Styles
+namespace Lets__study_.Styles.RichTB
 {
     class RichTBEnglishStyle : IRichTextBoxStyle
     {

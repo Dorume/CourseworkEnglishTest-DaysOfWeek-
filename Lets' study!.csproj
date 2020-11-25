@@ -225,8 +225,8 @@
     <Compile Include="Services\Interface\ITestHandler.cs" />
     <Compile Include="Services\ServiceRegistrator.cs" />
     <Compile Include="Services\TestHandler.cs" />
-    <Compile Include="Styles\RichTBEnglishStyle.cs" />
-    <Compile Include="Styles\RichTB\IRichTextBoxStyle.cs" />
+    <Compile Include="Styles\RichTB\RichTBEnglishStyle.cs" />
+    <Compile Include="Styles\RichTB\Interface\IRichTextBoxStyle.cs" />
     <Compile Include="Styles\StylesRegistrator.cs" />
     <Compile Include="Tests\DaysOfWeek.cs" />
     <Compile Include="Tests\Interface\ITest.cs" />

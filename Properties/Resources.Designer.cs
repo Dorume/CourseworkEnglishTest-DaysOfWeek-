@@ -121,6 +121,16 @@ namespace Lets__study_.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon ScoreFrmIcon {
+            get {
+                object obj = ResourceManager.GetObject("ScoreFrmIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap SettingsBtn {
@@ -147,6 +157,16 @@ namespace Lets__study_.Properties {
             get {
                 object obj = ResourceManager.GetObject("StartBtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon UserFrmIcon {
+            get {
+                object obj = ResourceManager.GetObject("UserFrmIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

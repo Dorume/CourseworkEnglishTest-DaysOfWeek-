@@ -8,6 +8,8 @@ namespace Lets__study_.Forms
             .AddSingleton<MainForm>()
             .AddTransient<QuestionFrm>()
             .AddSingleton<SettingsForm>()
+            .AddTransient<UserFrm>()
+            .AddTransient<ScoreFrm>()
             ;
     }
 }

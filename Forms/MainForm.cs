@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Windows.Forms;
 
 namespace Lets__study_.Forms
@@ -6,14 +7,12 @@ namespace Lets__study_.Forms
     public partial class MainForm : Form
     {
         private SettingsForm Settings { get; set; }
-        private QuestionFrm Question { get; set; }
-        public MainForm(SettingsForm child, QuestionFrm questionFrm)
+        private UserFrm UserFrm { get; set; }
+        public MainForm(SettingsForm settings)
         {
             InitializeComponent();
-            Settings = child;
+            Settings = settings;
             Settings.MdiParent = this;
-            Question = questionFrm;
-            Question.MdiParent = this;
         }
 
         private void HelpManualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,11 +27,9 @@ namespace Lets__study_.Forms
 
         private void StartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Question.Show();
-            BackPanel.Controls.Add(Question);
-            BackPanel.Tag = Question;
-            Question.TopMost = true;
-            Question.BringToFront();
+            UserFrm userFrm = App.Host.Services.GetRequiredService<UserFrm>();
+            userFrm.MdiParent = this;
+            userFrm.Show();
         }
 
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)

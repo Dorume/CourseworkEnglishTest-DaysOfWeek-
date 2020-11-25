@@ -2,6 +2,7 @@
 using Lets__study_.Services;
 using Lets__study_.Styles;
 using Lets__study_.Tests;
+using Lets__study_.User;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -22,6 +23,7 @@ namespace Lets__study_
             .AddTest()
             .AddServices()
             .AddStyles()
+            .AddUser()
             ;
         internal static async void OnStartup()
         {

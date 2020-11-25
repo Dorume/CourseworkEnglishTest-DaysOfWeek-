@@ -1,4 +1,6 @@
 ﻿using Lets__study_.Services.Interface;
+using Lets__study_.Styles.ButtonsS.Interface;
+using Lets__study_.Styles.Panels.Interface;
 using Lets__study_.Styles.RichTB.Interface;
 using System;
 using System.Collections.Generic;
@@ -9,15 +11,21 @@ namespace Lets__study_.Forms
     public partial class QuestionFrm : Form
     {
         private ITestHandler Test { get; set; }
-       // private IRichTextBoxStyle TextBoxStyle { get; set; }
+        private IButtonStyle ButtonStyle { get; set; }
         private List<string> QuestionList { get; set; }
-        public QuestionFrm(ITestHandler test, IRichTextBoxStyle textBoxStyle)
+        public QuestionFrm(ITestHandler test, IRichTextBoxStyle textBoxStyle, IPanelStyle panelStyle,
+            IButtonStyle buttonStyle)
         {
             InitializeComponent();
             Test = test;
             QuestionList = Test.GetQuestions();
-            //TextBoxStyle = textBoxStyle;
             textBoxStyle.GetStyle(QuestionTextBox);
+            panelStyle.GetStyle(QuestionsbtnsPanel);
+            panelStyle.GetStyle(panel1);
+            panelStyle.GetStyle(panel2);
+            panelStyle.GetStyle(BottomPanel);
+            panelStyle.GetStyle(OkbtnPanel);
+            ButtonStyle = buttonStyle;
             CreateBtns();
         }
 
@@ -30,6 +38,7 @@ namespace Lets__study_.Forms
                     Text = (count+1).ToString(),
                 };
                 btn.Click += QuestionBtn_Click;
+                ButtonStyle.GetStyle(btn);
                 QuestionsbtnsPanel.Controls.Add(btn);
             }
             

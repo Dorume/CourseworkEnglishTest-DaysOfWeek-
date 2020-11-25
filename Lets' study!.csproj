@@ -225,6 +225,10 @@
     <Compile Include="Services\Interface\ITestHandler.cs" />
     <Compile Include="Services\ServiceRegistrator.cs" />
     <Compile Include="Services\TestHandler.cs" />
+    <Compile Include="Styles\ButtonsS\ButtonEglishStyle.cs" />
+    <Compile Include="Styles\ButtonsS\Interface\IButtonStyle.cs" />
+    <Compile Include="Styles\Panels\PanelsEnglishStyle.cs" />
+    <Compile Include="Styles\Panels\Interface\IFormStyle.cs" />
     <Compile Include="Styles\RichTB\RichTBEnglishStyle.cs" />
     <Compile Include="Styles\RichTB\Interface\IRichTextBoxStyle.cs" />
     <Compile Include="Styles\StylesRegistrator.cs" />

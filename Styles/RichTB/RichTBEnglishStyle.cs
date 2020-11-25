@@ -9,6 +9,7 @@ namespace Lets__study_.Styles.RichTB
         public void GetStyle(RichTextBox textBox)
         {
             textBox.ForeColor = Color.Chocolate;
+            textBox.BackColor = Color.Wheat;
             textBox.Font = new Font("Maiandra GD", 16);
         }
 

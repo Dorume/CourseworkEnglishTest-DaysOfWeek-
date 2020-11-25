@@ -1,5 +1,6 @@
 ﻿using Lets__study_.Forms;
 using Lets__study_.Services;
+using Lets__study_.Styles;
 using Lets__study_.Tests;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,6 +21,7 @@ namespace Lets__study_
             .AddForms()
             .AddTest()
             .AddServices()
+            .AddStyles()
             ;
         internal static async void OnStartup()
         {

@@ -9,12 +9,13 @@ namespace Lets__study_.Forms
     {
         public int Score { get; set; }
         public IUser User { get; set; }
-        public ScoreFrm(IPanelStyle panelStyle, IButtonStyle buttonStyle)
+        public ScoreFrm(IPanelStyle panelStyle, IButtonStyle buttonStyle, IUser user)
         {
             InitializeComponent();
             panelStyle.GetStyle(MainPanel);
             panelStyle.GetStyle(flowLayoutPanel1);
             buttonStyle.GetStyle(CloseBtn);
+            User = user;
 
             UserLabel.Text = User.Surname + " " + User.Name;
             ScoreLabel.Text = Score.ToString();

@@ -8,6 +8,7 @@ namespace Lets__study_.Forms
         public SettingsForm()
         {
             InitializeComponent();
+            CountOfQuestionsNumeric.Value = Properties.Settings.Default.CountOfQuestions;
         }
 
         private void SettingsForm_FormClosing(object sender, FormClosingEventArgs e)

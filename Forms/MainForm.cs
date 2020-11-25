@@ -7,7 +7,7 @@ namespace Lets__study_.Forms
     public partial class MainForm : Form
     {
         private SettingsForm Settings { get; set; }
-        private UserFrm UserFrm { get; set; }
+
         public MainForm(SettingsForm settings)
         {
             InitializeComponent();
@@ -30,6 +30,10 @@ namespace Lets__study_.Forms
             UserFrm userFrm = App.Host.Services.GetRequiredService<UserFrm>();
             userFrm.MdiParent = this;
             userFrm.Show();
+            BackPanel.Controls.Add(userFrm);
+            BackPanel.Tag = userFrm;
+            userFrm.TopMost = true;
+            userFrm.BringToFront();
         }
 
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,7 +42,6 @@ namespace Lets__study_.Forms
             BackPanel.Controls.Add(Settings);
             BackPanel.Tag = Settings;
             Settings.TopMost = true;
-            Settings.BringToFront();
             Settings.BringToFront();
         }
     }

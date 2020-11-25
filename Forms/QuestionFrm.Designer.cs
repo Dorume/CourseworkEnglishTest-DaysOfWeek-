@@ -28,69 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.LevelsBtn = new System.Windows.Forms.Panel();
             this.QuestionPanel = new System.Windows.Forms.Panel();
-            this.AnswerPanel = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.OkbtnPanel = new System.Windows.Forms.Panel();
             this.AnswerBtn = new System.Windows.Forms.Button();
             this.PrevBtn = new System.Windows.Forms.Button();
             this.NextBtn = new System.Windows.Forms.Button();
             this.FinishTestBtn = new System.Windows.Forms.Button();
+            this.QuestionsbtnsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.QuestionTextBox = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.QuestionPanel.SuspendLayout();
-            this.AnswerPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.OkbtnPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(384, 172);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // LevelsBtn
-            // 
-            this.LevelsBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LevelsBtn.Location = new System.Drawing.Point(0, 0);
-            this.LevelsBtn.Name = "LevelsBtn";
-            this.LevelsBtn.Size = new System.Drawing.Size(384, 36);
-            this.LevelsBtn.TabIndex = 3;
             // 
             // QuestionPanel
             // 
-            this.QuestionPanel.Controls.Add(this.AnswerPanel);
-            this.QuestionPanel.Controls.Add(this.richTextBox1);
+            this.QuestionPanel.Controls.Add(this.panel1);
+            this.QuestionPanel.Controls.Add(this.QuestionsbtnsPanel);
             this.QuestionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QuestionPanel.Location = new System.Drawing.Point(0, 36);
+            this.QuestionPanel.Location = new System.Drawing.Point(0, 0);
             this.QuestionPanel.Name = "QuestionPanel";
-            this.QuestionPanel.Size = new System.Drawing.Size(384, 275);
+            this.QuestionPanel.Size = new System.Drawing.Size(384, 311);
             this.QuestionPanel.TabIndex = 5;
-            // 
-            // AnswerPanel
-            // 
-            this.AnswerPanel.Controls.Add(this.richTextBox2);
-            this.AnswerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AnswerPanel.Location = new System.Drawing.Point(0, 172);
-            this.AnswerPanel.Name = "AnswerPanel";
-            this.AnswerPanel.Padding = new System.Windows.Forms.Padding(100, 30, 100, 30);
-            this.AnswerPanel.Size = new System.Drawing.Size(384, 103);
-            this.AnswerPanel.TabIndex = 3;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(100, 30);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(184, 43);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "";
             // 
             // BottomPanel
             // 
@@ -155,6 +120,53 @@
             this.FinishTestBtn.Text = "Завершити тест";
             this.FinishTestBtn.UseVisualStyleBackColor = true;
             // 
+            // QuestionsbtnsPanel
+            // 
+            this.QuestionsbtnsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QuestionsbtnsPanel.Location = new System.Drawing.Point(0, 0);
+            this.QuestionsbtnsPanel.Name = "QuestionsbtnsPanel";
+            this.QuestionsbtnsPanel.Size = new System.Drawing.Size(384, 56);
+            this.QuestionsbtnsPanel.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.QuestionTextBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(384, 255);
+            this.panel1.TabIndex = 1;
+            // 
+            // QuestionTextBox
+            // 
+            this.QuestionTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QuestionTextBox.Location = new System.Drawing.Point(0, 0);
+            this.QuestionTextBox.Name = "QuestionTextBox";
+            this.QuestionTextBox.ReadOnly = true;
+            this.QuestionTextBox.Size = new System.Drawing.Size(384, 115);
+            this.QuestionTextBox.TabIndex = 0;
+            this.QuestionTextBox.Text = "";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.richTextBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 115);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(50);
+            this.panel2.Size = new System.Drawing.Size(384, 140);
+            this.panel2.TabIndex = 1;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox2.Location = new System.Drawing.Point(50, 50);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(284, 40);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
+            // 
             // QuestionFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,23 +174,20 @@
             this.ClientSize = new System.Drawing.Size(384, 411);
             this.Controls.Add(this.QuestionPanel);
             this.Controls.Add(this.BottomPanel);
-            this.Controls.Add(this.LevelsBtn);
+            this.Icon = global::Lets__study_.Properties.Resources.QuestionFormIcon;
             this.MinimumSize = new System.Drawing.Size(400, 450);
             this.Name = "QuestionFrm";
             this.Text = "QuestionFrm";
             this.QuestionPanel.ResumeLayout(false);
-            this.AnswerPanel.ResumeLayout(false);
             this.BottomPanel.ResumeLayout(false);
             this.OkbtnPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.Icon = Properties.Resources.QuestionFormIcon;
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Panel LevelsBtn;
         private System.Windows.Forms.Panel QuestionPanel;
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Panel OkbtnPanel;
@@ -186,7 +195,10 @@
         private System.Windows.Forms.Button NextBtn;
         private System.Windows.Forms.Button FinishTestBtn;
         private System.Windows.Forms.Button AnswerBtn;
-        private System.Windows.Forms.Panel AnswerPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox QuestionTextBox;
+        private System.Windows.Forms.FlowLayoutPanel QuestionsbtnsPanel;
     }
 }

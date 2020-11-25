@@ -1,20 +1,44 @@
-﻿using System;
+﻿using Lets__study_.Services.Interface;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Lets__study_.Forms
 {
     public partial class QuestionFrm : Form
     {
-        public QuestionFrm()
+        private ITestHandler Test { get; set; }
+        private List<string> QuestionList { get; set; }
+        public QuestionFrm(ITestHandler test)
         {
             InitializeComponent();
+            Test = test;
+            QuestionList = Test.GetQuestions();
+            CreateBtns();
+        }
+
+        private void CreateBtns()
+        {
+            for(int count = 0; count < Properties.Settings.Default.CountOfQuestions; count++)
+            {
+                Button btn = new Button()
+                {
+                    Text = (count+1).ToString(),
+                };
+                btn.Click += QuestionBtn_Click;
+                QuestionsbtnsPanel.Controls.Add(btn);
+            }
+        }
+
+        private void QuestionBtn_Click(object sender, EventArgs e)
+        {
+            RefreshQuestionTextBox(QuestionList[int.Parse((sender as Button).Text) - 1]);
+        }
+
+        private void RefreshQuestionTextBox(string question)
+        {
+            QuestionTextBox.Clear();
+            QuestionTextBox.Text = question;
         }
     }
 }

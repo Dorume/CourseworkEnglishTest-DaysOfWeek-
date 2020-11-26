@@ -1,6 +1,7 @@
 ﻿using Lets__study_.Services.Interface;
 using Lets__study_.Tests.Interface;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Lets__study_.Services
@@ -14,6 +15,7 @@ namespace Lets__study_.Services
         }
         public int CheckTest(List<string> questions, List<string> answers)
         {
+            answers = GetFormatedAnswers(answers);
             int score = 0;
             int counter = questions.Count - 1;
             foreach (var question in Test.QuestionDictionary)
@@ -28,6 +30,17 @@ namespace Lets__study_.Services
             }
             return score;
         }
+
+        private List<string> GetFormatedAnswers(List<string> answers)
+        {
+            for (int i = 0; i < answers.Count; i++)
+                if (string.IsNullOrEmpty(answers[i]))
+                    answers[i] = "Empty";
+
+            return (from string answer in answers
+                    select answer.Replace(" ", "").ToLower().Replace(answer[0], char.ToUpper(answer[0]))).ToList();
+        }
+  
 
         public List<string> GetQuestions()
         {

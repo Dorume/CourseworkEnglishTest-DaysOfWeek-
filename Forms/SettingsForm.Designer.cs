@@ -99,7 +99,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = global::Lets__study_.Properties.Resources.SettingsFormIcon;
             this.Name = "SettingsForm";
-            this.Text = "SettingsForm";
+            this.Text = "Settings";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace Lets__study_.Forms
             get => _CurrentButton;
             set
             {
-                _CurrentButton.BackColor = Button.DefaultBackColor;
+                ButtonStyle.GetStyle(_CurrentButton);
                 _CurrentButton = value;
                 Counter = int.Parse(_CurrentButton.Name);
             }
@@ -50,6 +50,12 @@ namespace Lets__study_.Forms
             panelStyle.GetStyle(BottomPanel);
             panelStyle.GetStyle(OkbtnPanel);
             ButtonStyle = buttonStyle;
+
+            ButtonStyle.GetStyle(FinishTestBtn);
+            ButtonStyle.GetStyle(NextBtn);
+            ButtonStyle.GetStyle(PrevBtn);
+            ButtonStyle.GetStyle(AnswerBtn);
+
             CreateBtns();
             RefreshQuestionTextBox(QuestionList[Counter]);
 
@@ -93,7 +99,7 @@ namespace Lets__study_.Forms
         {
             QuestionTextBox.Clear();
             QuestionTextBox.Text = question;
-            CurrentQuestion.BackColor = Color.Red;
+            CurrentQuestion.BackColor = Color.Orange;
             richTextBox2.Text = AnswerList[Counter];
             richTextBox2.ReadOnly = CheckedList[Counter];
             DisplayCheckedLabel.Visible = CheckedList[Counter];

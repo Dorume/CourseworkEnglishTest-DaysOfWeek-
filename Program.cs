@@ -1,5 +1,4 @@
-﻿using Lets__study_.Forms;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows.Forms;
 

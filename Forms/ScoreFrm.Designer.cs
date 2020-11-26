@@ -111,6 +111,7 @@
             this.CloseBtn.TabIndex = 6;
             this.CloseBtn.Text = "Закрити";
             this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // ScoreFrm
             // 
@@ -118,13 +119,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 141);
             this.Controls.Add(this.MainPanel);
+            this.Icon = global::Lets__study_.Properties.Resources.ScoreFrmIcon;
             this.Name = "ScoreFrm";
             this.Text = "Result";
+            this.Shown += new System.EventHandler(this.ScoreFrm_Shown);
             this.MainPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.Icon = Properties.Resources.ScoreFrmIcon;
 
         }
 

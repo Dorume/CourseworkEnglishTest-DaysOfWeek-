@@ -1,10 +1,10 @@
-﻿using Lets__study_.Styles.Panels;
+﻿using Lets__study_.Styles.ButtonsS;
+using Lets__study_.Styles.ButtonsS.Interface;
+using Lets__study_.Styles.Panels;
 using Lets__study_.Styles.Panels.Interface;
 using Lets__study_.Styles.RichTB;
 using Lets__study_.Styles.RichTB.Interface;
 using Microsoft.Extensions.DependencyInjection;
-using Lets__study_.Styles.ButtonsS.Interface;
-using Lets__study_.Styles.ButtonsS;
 
 namespace Lets__study_.Styles
 {

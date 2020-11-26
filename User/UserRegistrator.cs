@@ -7,6 +7,6 @@ namespace Lets__study_.User
     {
         public static IServiceCollection AddUser(this IServiceCollection services) => services
             .AddTransient<IUser, User>()
-            ; 
+            ;
     }
 }

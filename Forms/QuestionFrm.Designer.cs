@@ -40,6 +40,7 @@
             this.PrevBtn = new System.Windows.Forms.Button();
             this.NextBtn = new System.Windows.Forms.Button();
             this.FinishTestBtn = new System.Windows.Forms.Button();
+            this.DisplayCheckedLabel = new System.Windows.Forms.Label();
             this.QuestionPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,6 +70,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.DisplayCheckedLabel);
             this.panel2.Controls.Add(this.richTextBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 115);
@@ -85,6 +87,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(284, 40);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // QuestionTextBox
             // 
@@ -136,6 +139,7 @@
             this.AnswerBtn.TabIndex = 0;
             this.AnswerBtn.Text = "Відповісти";
             this.AnswerBtn.UseVisualStyleBackColor = true;
+            this.AnswerBtn.Click += new System.EventHandler(this.AnswerBtn_Click);
             // 
             // PrevBtn
             // 
@@ -146,6 +150,7 @@
             this.PrevBtn.TabIndex = 2;
             this.PrevBtn.Text = "Назад";
             this.PrevBtn.UseVisualStyleBackColor = true;
+            this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
             // 
             // NextBtn
             // 
@@ -156,6 +161,7 @@
             this.NextBtn.TabIndex = 1;
             this.NextBtn.Text = "Вперед";
             this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // FinishTestBtn
             // 
@@ -166,6 +172,17 @@
             this.FinishTestBtn.TabIndex = 0;
             this.FinishTestBtn.Text = "Завершити тест";
             this.FinishTestBtn.UseVisualStyleBackColor = true;
+            this.FinishTestBtn.Click += new System.EventHandler(this.FinishTestBtn_Click);
+            // 
+            // DisplayCheckedLabel
+            // 
+            this.DisplayCheckedLabel.AutoSize = true;
+            this.DisplayCheckedLabel.Location = new System.Drawing.Point(3, 3);
+            this.DisplayCheckedLabel.Name = "DisplayCheckedLabel";
+            this.DisplayCheckedLabel.Size = new System.Drawing.Size(119, 13);
+            this.DisplayCheckedLabel.TabIndex = 1;
+            this.DisplayCheckedLabel.Text = "Відповідь зарахована!";
+            this.DisplayCheckedLabel.Visible = false;
             // 
             // QuestionFrm
             // 
@@ -182,6 +199,7 @@
             this.QuestionPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.BottomPanel.ResumeLayout(false);
             this.OkbtnPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -201,5 +219,6 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.RichTextBox QuestionTextBox;
         private System.Windows.Forms.FlowLayoutPanel QuestionsbtnsPanel;
+        private System.Windows.Forms.Label DisplayCheckedLabel;
     }
 }

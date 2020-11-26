@@ -1,6 +1,7 @@
 ﻿using Lets__study_.Styles.ButtonsS.Interface;
 using Lets__study_.Styles.Panels.Interface;
 using Lets__study_.User.Interface;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Forms;
 
 namespace Lets__study_.Forms
@@ -10,16 +11,6 @@ namespace Lets__study_.Forms
         private QuestionFrm QuestionFrm { get; set; }
         private ScoreFrm ScoreFrm { get; set; }
         private IUser User { get; set; }
-
-        public int Score
-        {
-            get => Score;
-            set
-            {
-                Score = value;
-                DisplayScoreForm();
-            }
-        }
 
         public UserFrm(IPanelStyle panelStyle, IButtonStyle buttonStyle, IUser user,
             QuestionFrm questionFrm, ScoreFrm scoreFrm)
@@ -31,32 +22,48 @@ namespace Lets__study_.Forms
             QuestionFrm = questionFrm;
             ScoreFrm = scoreFrm;
             User = user;
+
+
+            ScoreFrm.MdiParent = this.MdiParent;
+
+            QuestionFrm.FormClosing += QuestionFrm_FormClosing;
         }
 
         private void NameTextBox_TextChanged(object sender, System.EventArgs e)
         {
             User.Name = NameTextBox.Text;
         }
-
         private void SurnameTextBox_TextChanged(object sender, System.EventArgs e)
         {
             User.Surname = SurnameTextBox.Text;
         }
-
         private void StartBtn_Click(object sender, System.EventArgs e)
         {
             Hide();
-            QuestionFrm.MdiParent = MdiParent;
-            QuestionFrm.Show();
+            DiplayOnMainForm(QuestionFrm);
         }
 
-        private void DisplayScoreForm()
+        private void QuestionFrm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ScoreFrm.MdiParent = MdiParent;
-            ScoreFrm.Score = Score;
+            DisplayScoreForm(QuestionFrm.Score);
+        }
+
+        private void DisplayScoreForm(int score)
+        {
+            ScoreFrm.Score = score;
             ScoreFrm.User = User;
-            ScoreFrm.Show();
+            DiplayOnMainForm(ScoreFrm);
             this.Close();
+        }
+
+        private void DiplayOnMainForm(Form form)
+        {
+            MainForm mainForm = App.Host.Services.GetRequiredService<MainForm>();
+            form.MdiParent = mainForm;
+            mainForm.BackPanel.Controls.Add(form);
+            mainForm.BackPanel.Tag = form;
+            form.BringToFront();
+            form.Show();
         }
     }
 }

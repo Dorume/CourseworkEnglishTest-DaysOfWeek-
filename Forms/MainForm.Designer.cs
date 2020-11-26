@@ -165,8 +165,8 @@
         private System.Windows.Forms.ToolStripMenuItem HelpManualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StartToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.Panel BackPanel;
         private System.Windows.Forms.ToolTip ToolTip;
+        public System.Windows.Forms.Panel BackPanel;
     }
 }
 

@@ -17,11 +17,18 @@ namespace Lets__study_.Forms
             buttonStyle.GetStyle(CloseBtn);
             User = user;
 
+        }
+
+        private void CloseBtn_Click(object sender, System.EventArgs e)
+        {
+            Close();
+        }
+
+        private void ScoreFrm_Shown(object sender, System.EventArgs e)
+        {
+
             UserLabel.Text = User.Surname + " " + User.Name;
             ScoreLabel.Text = Score.ToString();
         }
-
-
-
     }
 }

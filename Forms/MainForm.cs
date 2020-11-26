@@ -32,7 +32,6 @@ namespace Lets__study_.Forms
             userFrm.Show();
             BackPanel.Controls.Add(userFrm);
             BackPanel.Tag = userFrm;
-            userFrm.TopMost = true;
             userFrm.BringToFront();
         }
 
@@ -41,8 +40,8 @@ namespace Lets__study_.Forms
             Settings.Show();
             BackPanel.Controls.Add(Settings);
             BackPanel.Tag = Settings;
-            Settings.TopMost = true;
             Settings.BringToFront();
         }
+
     }
 }

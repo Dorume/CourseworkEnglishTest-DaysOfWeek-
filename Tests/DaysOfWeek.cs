@@ -7,13 +7,13 @@ namespace Lets__study_.Tests
     {
         public Dictionary<string, string> QuestionDictionary { get; set; } = new Dictionary<string, string>()
         {
-            {"Monday", "Понеділок" },
-            {"Tuesday", "Вівторок" },
-            {"Wednesday", "Середа" },
-            {"Thursday", "Четверг" },
-            {"Friday", "Пятниця" },
-            {"Saturday", "Субота" },
-            {"Sunday", "Неділя" },
+            {"Monday", "понеділок" },
+            {"Tuesday", "вівторок" },
+            {"Wednesday", "середа" },
+            {"Thursday", "четвер" },
+            {"Friday", "пятниця" },
+            {"Saturday", "субота" },
+            {"Sunday", "неділя" },
         };
     }
 }

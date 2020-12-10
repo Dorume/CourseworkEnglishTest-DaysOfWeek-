@@ -36,9 +36,12 @@ namespace Lets__study_.Services
             for (int i = 0; i < answers.Count; i++)
                 if (string.IsNullOrEmpty(answers[i]))
                     answers[i] = "Empty";
+            List<string> _answers = new List<string>();
 
-            return (from string answer in answers
-                    select answer.Replace(" ", "").ToLower().Replace(answer[0], char.ToUpper(answer[0]))).ToList();
+            foreach (var answer in answers) 
+                _answers.Add(answer.Replace(" ", "").Replace("'", "")
+                    .Replace("`","").ToLower());
+            return _answers;
         }
   
 
